@@ -1,0 +1,783 @@
+/* Basic Reset & Body Styles */
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+/* Header */
+header {
+    background: #1a1a1a; /* Darker background */
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+header h1 {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.8rem;
+    color: #ffd700; /* Gold */
+    animation: fadeInUp 1s ease-out;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 5px;
+    color: #bbb;
+    animation: fadeInUp 1.2s ease-out;
+}
+
+header nav ul {
+    padding: 0;
+    list-style: none;
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+header nav ul li {
+    margin: 5px 10px; /* Adjusted for better spacing on smaller screens */
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.0rem; /* Slightly smaller for more links */
+    transition: color 0.3s ease;
+    white-space: nowrap; /* Prevent breaking nav links */
+    animation: fadeIn 1.4s ease-out;
+}
+
+header nav a:hover {
+    color: #007bff; /* Blue */
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://via.placeholder.com/1500x600/000000/FFFFFF?text=YOUR+HERO+IMAGE') no-repeat center center/cover; /* Placeholder. Consider using a relevant background image */
+    color: #fff;
+    text-align: center;
+    padding: 120px 0;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 500px;
+}
+
+.hero-section h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.5rem;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    animation: fadeInUp 1.6s ease-out;
+}
+
+.hero-section .qualities {
+    font-size: 1.8rem;
+    margin-bottom: 35px;
+    color: #ffd700; /* Gold */
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    animation: fadeInUp 1.8s ease-out;
+}
+
+.hero-section .qualities span {
+    margin: 0 15px;
+    display: inline-block; /* Ensures consistent spacing */
+}
+
+.hero-section .cta-text {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    font-family: 'Montserrat', sans-serif;
+    color: #e0e0e0;
+    animation: fadeInUp 2s ease-out;
+}
+
+.button {
+    display: inline-block;
+    background: #007bff; /* Blue */
+    color: #fff;
+    padding: 18px 40px;
+    text-decoration: none;
+    border-radius: 50px; /* Pill shape */
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3rem;
+    box-shadow: 0 5px 15px rgba(0,123,255,0.4);
+    animation: fadeIn 2.2s ease-out, pulse 5s infinite alternate; /* Added pulse animation */
+}
+
+.button:hover {
+    background: #0056b3; /* Darker blue */
+    transform: translateY(-3px);
+}
+
+/* Base Service Section Styling */
+.service-section-base {
+    padding: 80px 0;
+    text-align: center;
+    animation: fadeIn 1s ease-out; /* Base animation for sections */
+}
+
+.service-section-base h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    margin-bottom: 50px;
+    color: #222;
+    position: relative;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.service-section-base h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: #007bff;
+    border-radius: 2px;
+}
+
+
+/* Specific Service Section Colors & Animation Delays */
+
+/* Core Services */
+#services {
+    background-color: #ffffff; /* White */
+    animation-delay: 0s;
+}
+
+/* Niche Services */
+#niche-services {
+    background-color: #e6f2ff; /* Light Blue */
+    animation-delay: 0.2s;
+}
+
+/* Video Production */
+#video-production {
+    background-color: #fff2e6; /* Light Orange/Peach */
+    animation-delay: 0.4s;
+}
+
+/* Digital Marketing */
+#digital-marketing {
+    background-color: #e6ffe6; /* Light Green */
+    animation-delay: 0.6s;
+}
+
+/* AI & Machine Learning */
+#ai-ml {
+    background-color: #f2e6ff; /* Light Purple */
+    animation-delay: 0.8s;
+}
+
+/* UI/UX Design */
+#ui-ux {
+    background-color: #ffffe6; /* Light Yellow */
+    animation-delay: 1s;
+}
+
+/* Cloud & DevOps */
+#cloud-devops {
+    background-color: #e6f0ff; /* Slightly darker light blue */
+    animation-delay: 1.2s;
+}
+
+
+.service-categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.service-column {
+    background: #fff;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 320px;
+    max-width: 45%;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 1s ease-out; /* Individual column animation */
+}
+
+.service-column:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.service-column h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: #007bff;
+    font-size: 2rem;
+    margin-bottom: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    animation: fadeInUp 1.2s ease-out;
+}
+
+.service-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.service-column ul li {
+    margin-bottom: 18px;
+    font-size: 1.15rem;
+    display: flex;
+    align-items: center;
+    animation: fadeInRight 1.4s ease-out;
+}
+
+.service-column ul li i {
+    color: #28a745;
+    margin-right: 12px;
+    font-size: 1.3rem;
+}
+
+.web-services .service-image {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.web-services .service-image img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1.4s ease-out;
+}
+
+
+/* MD Bot Section */
+.md-bot-section {
+    background: #1a1a1a;
+    color: #fff;
+    padding: 50px;
+    margin-top: 50px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    animation: fadeInUp 1s ease-out;
+}
+
+.md-bot-image {
+    flex: 1;
+    min-width: 280px;
+    max-width: 400px;
+    text-align: center;
+    animation: fadeIn 1.2s ease-out;
+}
+
+.md-bot-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.md-bot-content {
+    flex: 2;
+    min-width: 300px;
+    text-align: left;
+}
+
+.md-bot-content h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: #ffd700;
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    animation: fadeInUp 1.2s ease-out;
+}
+
+.md-bot-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.md-bot-content ul li {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: flex-start;
+    animation: fadeInRight 1.4s ease-out;
+}
+
+.md-bot-content ul li i {
+    color: #dc3545;
+    margin-right: 12px;
+    font-size: 1.5rem;
+    line-height: 1.2;
+}
+
+.md-bot-content small {
+    font-size: 0.9em;
+    color: #bbb;
+    margin-left: 35px;
+    display: block;
+    margin-top: -10px;
+}
+
+/* New Special Services Grid */
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    justify-items: center;
+    padding-top: 20px;
+}
+
+.service-item {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 220px;
+    animation: fadeInUp 1.8s ease-out; /* Individual item animation */
+}
+
+/* This is removed as colors are now per section base */
+/* .special-services-section.gray-bg .service-item {
+    background: #fdfdfd;
+} */
+
+.service-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+.service-item .icon-large {
+    font-size: 3.5rem;
+    color: #007bff;
+    margin-bottom: 15px;
+    animation: fadeIn 1s ease-out;
+}
+
+.service-item h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4rem;
+    color: #333;
+    margin-top: 10px;
+    line-height: 1.3;
+    animation: fadeInUp 1.2s ease-out;
+}
+
+/* Animation Classes (Re-applying for consistent animation) */
+.animate-text {
+  animation: fadeInUp 1s ease-out;
+}
+
+.animate-link {
+  animation: fadeIn 1.2s ease-out;
+}
+
+.animate-button {
+  animation: fadeIn 1.4s ease-out, pulse 5s infinite alternate;
+}
+
+.animate-list {
+  animation: fadeInRight 1.6s ease-out;
+}
+
+.animate-item {
+  animation: fadeInUp 1.8s ease-out;
+}
+
+/* Keyframes for Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
+
+/* About Section */
+.about-section {
+    background: #f4f4f4;
+    padding: 80px 0;
+    text-align: center;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.about-section h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    margin-bottom: 50px;
+    color: #222;
+    position: relative;
+}
+.about-section h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: #007bff;
+    border-radius: 2px;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    text-align: left;
+}
+
+.about-image {
+    flex: 1;
+    min-width: 250px;
+    max-width: 350px;
+    text-align: center;
+    animation: fadeIn 1s ease-out;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.about-text {
+    flex: 2;
+    min-width: 350px;
+    background: #fff;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.about-text p {
+    margin-bottom: 20px;
+    font-size: 1.15rem;
+    animation: fadeInUp 1.2s ease-out;
+}
+
+.about-text .rates-mention {
+    font-weight: bold;
+    color: #dc3545; /* Red */
+    font-size: 1.3rem;
+    text-align: center;
+    margin-top: 30px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+    animation: fadeInUp 1.4s ease-out;
+}
+
+
+/* Contact Section */
+.contact-section {
+    background: #007bff; /* Blue */
+    color: #fff;
+    padding: 80px 0;
+    text-align: center;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.contact-section h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    margin-bottom: 25px;
+    position: relative;
+}
+.contact-section h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: #ffd700; /* Gold */
+    border-radius: 2px;
+}
+
+.contact-section > p { /* Target the direct paragraph for margin */
+    font-size: 1.3rem;
+    margin-bottom: 40px;
+    animation: fadeInUp 1s ease-out;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.contact-info p {
+    font-size: 1.4rem;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    animation: fadeInUp 1.2s ease-out;
+}
+
+.contact-info a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #ffd700; /* Gold */
+}
+
+.contact-info i {
+    margin-right: 15px;
+    font-size: 1.6rem;
+    color: #ffd700; /* Gold */
+}
+
+/* Footer */
+footer {
+    background: #1a1a1a;
+    color: #ccc;
+    text-align: center;
+    padding: 25px 0;
+    font-size: 1rem;
+    animation: fadeIn 1s ease-out;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    header nav ul li {
+        margin: 5px 8px; /* Tighter for more links */
+    }
+    header nav a {
+        font-size: 0.95rem;
+    }
+    .hero-section h2 {
+        font-size: 2.8rem;
+    }
+    .hero-section .qualities {
+        font-size: 1.5rem;
+    }
+    .hero-section .cta-text {
+        font-size: 1.6rem;
+    }
+    .button {
+        padding: 15px 30px;
+        font-size: 1.1rem;
+    }
+    .service-column {
+        max-width: 80%; /* Allow single column on smaller tablets */
+    }
+    .md-bot-section {
+        flex-direction: column;
+        text-align: center;
+    }
+    .md-bot-content {
+        text-align: center;
+    }
+    .md-bot-content ul li {
+        justify-content: center; /* Center align list items */
+    }
+    .md-bot-content small {
+        margin-left: 0;
+        text-align: center;
+    }
+    .about-content {
+        flex-direction: column;
+    }
+    .about-image, .about-text {
+        max-width: 90%;
+        min-width: unset;
+    }
+    .service-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+    header h1 {
+        font-size: 2.2rem;
+    }
+    header nav ul li {
+        margin: 5px 5px;
+    }
+    header nav a {
+        font-size: 0.9rem;
+    }
+    .hero-section h2 {
+        font-size: 2.2rem;
+    }
+    .hero-section .qualities {
+        font-size: 1.2rem;
+    }
+    .hero-section .cta-text {
+        font-size: 1.4rem;
+    }
+    .services-section h2, .special-services-section h2, .about-section h2, .contact-section h2 {
+        font-size: 2.3rem;
+    }
+    .service-column {
+        padding: 25px;
+    }
+    .md-bot-section {
+        padding: 30px;
+    }
+    .md-bot-content h3 {
+        font-size: 2rem;
+    }
+    .contact-info p {
+        font-size: 1.2rem;
+    }
+    .contact-info i {
+        font-size: 1.4rem;
+    }
+    .service-item {
+        padding: 20px;
+        min-height: 200px;
+    }
+    .service-item .icon-large {
+        font-size: 3rem;
+    }
+    .service-item h3 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+    header p {
+        font-size: 1rem;
+    }
+    header nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+    .hero-section {
+        padding: 80px 0;
+    }
+    .hero-section h2 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+    }
+    .hero-section .qualities {
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+    .hero-section .qualities span {
+        display: block;
+        margin: 5px 0;
+    }
+    .hero-section .cta-text {
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+    }
+    .button {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+    .service-column, .md-bot-section, .about-text {
+        padding: 20px;
+    }
+    .service-column h3 {
+        font-size: 1.6rem;
+    }
+    .service-column ul li, .md-bot-content ul li, .about-text p {
+        font-size: 1rem;
+    }
+    .md-bot-content h3 {
+        font-size: 1.8rem;
+    }
+    .contact-section > p {
+        font-size: 1.1rem;
+    }
+    .contact-info p {
+        flex-direction: column;
+        font-size: 1.1rem;
+    }
+    .contact-info i {
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+    .service-grid {
+        grid-template-columns: 1fr; /* Single column on very small screens */
+    }
+    .service-item {
+        min-height: auto; /* Allow height to adjust */
+    }
+}
